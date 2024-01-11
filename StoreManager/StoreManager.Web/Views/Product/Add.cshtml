@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Add Product";
+}
+
+<h2>Add Product</h2>
+
+<div class="form-group">
+    <form action="/Product/Add" method="post">
+        <div>
+            <label for="Name">Product Name:</label>
+            <input type="text" class="form-control" id="Name" name="Name" />
+        </div>
+
+        <div>
+            <label for="Price">Price:</label>
+            <input type="text" class="form-control" id="Price" name="Price" />
+        </div>
+
+        <div>
+            <label for="Description">Description:</label>
+            <input type="text" class="form-control" id="Description" name="Description" />
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </form>
+</div>

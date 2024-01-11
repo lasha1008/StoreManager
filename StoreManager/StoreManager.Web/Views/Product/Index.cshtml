@@ -1,0 +1,21 @@
+﻿@using StoreManager.Web.Models;
+@model IEnumerable<ProductModel>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<div class="product-list">
+    @foreach (var product in Model)
+    {
+        <div class="product-details">
+            <a asp-controller="product" asp-action="Details" asp-route-id="@product.Id">
+                <div class="product-title">@product.Name</div>
+            </a>
+        </div>
+    }
+
+    <div class="add-button">
+        <a href="/Product/Add" class="btn btn-primary">Add Product</a>
+    </div>
+</div>
